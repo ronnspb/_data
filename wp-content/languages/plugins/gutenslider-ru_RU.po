@@ -1,0 +1,75 @@
+# Translation of Plugins - WordPress Slider Block Gutenslider - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - WordPress Slider Block Gutenslider - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-10-01 18:42:24+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.0-alpha.9\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - WordPress Slider Block Gutenslider - Stable (latest release)\n"
+
+#: eedee-gutenslider.php:137 eedee-gutenslider.php:150
+msgid "Cheating huh?"
+msgstr "Эй! Жульничаем?"
+
+#: includes/admin/class-gutenslider-admin-start-page.php:161
+msgid "Get started with Gutenslider here:"
+msgstr "Начните работу с Гутенслайдером здесь:"
+
+#. Plugin Name of the plugin
+msgid "Gutenslider — The last WordPress slider you will ever need."
+msgstr "Гутенслайдер - единственный слайдер WordPress, который вам когда-либо понадобится."
+
+#: src/blocks/gutenslider/attributes.php:491
+msgid "No Divider"
+msgstr "Нет разделителя"
+
+#: src/init.php:90
+msgid "Rate Gutenslider&nbsp;★★★★★"
+msgstr "Оцените Гутенслайдер"
+
+#: src/init.php:90
+msgid "Review Gutenslider on WordPress.org"
+msgstr "Обзор Гутенслайдер на WordPress.org"
+
+#: src/init.php:127
+msgctxt "Block pattern description"
+msgid "Slider block that can be used for user reviews that rated your service or product or company."
+msgstr "Блок слайдера, который можно использовать для отзывов пользователей, оценивших вашу услугу, продукт или компанию."
+
+#: src/init.php:119
+msgid "Testimonial Slider"
+msgstr "Слайдер с отзывами"
+
+#. Description of the plugin
+msgid "WordPress slider plugin for Gutenberg. Create an image slider, video slider, fullscreen slider with this powerful slider block and add any block on top. Slide anything!"
+msgstr "Плагин слайдера WordPress для Gutenberg. Создайте слайдер изображения, слайдер видео, полноэкранный слайдер с помощью этого мощного блока слайдера и добавьте любой блок сверху. Двигайте что-угодно!"
+
+#: eedee-gutenslider.php:77
+msgid "You did it"
+msgstr "Готово!"
+
+#. Author URI of the plugin
+msgid "https://eedee.net"
+msgstr "https://eedee.net"
+
+#. Author of the plugin
+msgid "eedee"
+msgstr "eedee"
+
+#. Plugin URI of the plugin
+msgid "https://gutenslider.org"
+msgstr "https://gutenslider.org"
+
+#. translators: example text for slide 1.
+#: includes/admin/class-gutenslider-admin-start-page.php:65
+#: includes/admin/class-gutenslider-admin-start-page.php:66 src/init.php:109
+#: build/gutenslider.js:1 src/blocks/example.js:34
+#: build/gutenslider-pro.js:1572 build/gutenslider-pro.js:3088
+#: build/gutenslider-pro.js:4073 build/gutenslider.js:1572
+#: build/gutenslider.js:2661 build/gutenslider.js:3568
+msgid "Gutenslider"
+msgstr "Гутенслайдер"

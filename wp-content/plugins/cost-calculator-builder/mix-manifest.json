@@ -1,0 +1,13 @@
+{
+    "/frontend/dist/bundle.js": "/frontend/dist/bundle.js",
+    "/frontend/dist/admin.js": "/frontend/dist/admin.js",
+    "/frontend/dist/welcome.js": "/frontend/dist/welcome.js",
+    "/frontend/dist/order.js": "/frontend/dist/order.js",
+    "/frontend/dist/templates.js": "/frontend/dist/templates.js",
+    "/frontend/dist/category.js": "/frontend/dist/category.js",
+    "/frontend/dist/css/templates.css": "/frontend/dist/css/templates.css",
+    "/frontend/dist/css/welcome.css": "/frontend/dist/css/welcome.css",
+    "/frontend/dist/css/gopro.css": "/frontend/dist/css/gopro.css",
+    "/frontend/dist/css/admin.css": "/frontend/dist/css/admin.css",
+    "/frontend/dist/css/style.css": "/frontend/dist/css/style.css"
+}

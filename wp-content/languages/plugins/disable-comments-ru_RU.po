@@ -1,0 +1,507 @@
+# Translation of Plugins - Disable Comments &#8211; Remove Comments &amp; Stop Spam [Multi-Site Support] - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - Disable Comments &#8211; Remove Comments &amp; Stop Spam [Multi-Site Support] - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-04-24 15:23:09+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.0-alpha.7\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Disable Comments &#8211; Remove Comments &amp; Stop Spam [Multi-Site Support] - Stable (latest release)\n"
+
+#: views/partials/_sites.php:39
+msgid "200"
+msgstr "200"
+
+#: views/partials/_sites.php:38
+msgid "100"
+msgstr "100"
+
+#: views/partials/_sites.php:37
+msgid "50"
+msgstr "50"
+
+#: views/partials/_sites.php:36
+msgid "20"
+msgstr "20"
+
+#: views/partials/_sites.php:30
+msgid "Show Items:"
+msgstr "Показать элементы:"
+
+#: views/partials/_sites.php:26
+msgid "No subsite found"
+msgstr "Дочерний сайт не найден"
+
+#: views/partials/_sites.php:21
+msgid "Search by domain name..."
+msgstr "Поиск по доменному имени..."
+
+#: views/partials/_sites.php:13
+msgid "0 selected"
+msgstr "0 выбрано"
+
+#: views/partials/_disable.php:76
+msgid "Exclude Disable Comments Settings Based On User Roles"
+msgstr "Исключить Отключить настройки комментариев на основе ролей пользователей"
+
+#: views/partials/_disable.php:23
+msgid "Disable comments in the following sites:"
+msgstr "Отключите комментарии на следующих сайтах:"
+
+#: views/partials/_disable.php:17
+msgid "Enable Site Wise settings."
+msgstr "Включите настройки Site Wise."
+
+#: views/partials/_delete.php:10
+msgid "Delete comments in the following sites:"
+msgstr "Удалить комментарии на следующих сайтах:"
+
+#: views/partials/_disable.php:91
+msgid "This will exclude all the above settings for the selected user roles."
+msgstr "Это исключит все вышеуказанные настройки для выбранных ролей пользователей."
+
+#: disable-comments.php:871
+msgid "Logged out users"
+msgstr "Неавторизованным"
+
+#: includes/cli.php:189
+msgid "Enabled Avatar on your entire site. "
+msgstr "Включен аватар на всем сайте. "
+
+#: includes/cli.php:186
+msgid "Disabled Avatar on your entire site. "
+msgstr "Отключен аватар на всем вашем сайте. "
+
+#: includes/cli.php:180
+msgid "Enabled Comments via REST API. "
+msgstr "Включены комментарии через REST API. "
+
+#: includes/cli.php:171
+msgid "Enabled Comments via XML-RPC. "
+msgstr "Включены комментарии через XML-RPC. "
+
+#: views/partials/_disable.php:132
+msgid "This will change Avatar state from your entire network. If you want to change the Avatar setting specifically on your subsites by enabling site-wise settings, select \"Don't change\" from here."
+msgstr "Это изменит состояние аватара во всей вашей сети. Если вы хотите изменить настройку аватара конкретно на своих дочерних сайтах, включив настройки для сайта, выберите здесь «Не изменять»."
+
+#: views/partials/_disable.php:122
+msgid "Enable Avatar"
+msgstr "Включить аватар"
+
+#: views/partials/_disable.php:116
+msgid "Don't Change"
+msgstr "Не изменять"
+
+#: views/partials/_disable.php:111
+msgid "Avatar settings:"
+msgstr "Настройки аватара:"
+
+#: views/partials/_disable.php:107
+msgid "This will change Avatar state from your entire site."
+msgstr "Это изменит состояние аватара на всем вашем сайте."
+
+#: views/partials/_disable.php:103 views/partials/_disable.php:128
+msgid "Disable Avatar"
+msgstr "Отключить аватар"
+
+#: views/partials/_disable.php:28
+msgid "All the underneath settings (except Avatar settings) will be applied for these selected sub sites."
+msgstr "Все указанные ниже настройки (кроме настроек аватара) будут применяться для этих выбранных дочерних сайтов."
+
+#: views/partials/_delete.php:64
+msgid "This will permanently delete spam comments everywhere on your website."
+msgstr "Это навсегда удалит спам-комментарии на вашем сайте."
+
+#: views/partials/_delete.php:63
+msgid "Permanently delete all spam comments on your WordPress website"
+msgstr "Навсегда удалить все спам-комментарии на вашем сайте WordPress"
+
+#: views/partials/_delete.php:63
+msgid "Spam:"
+msgstr "Спам:"
+
+#: disable-comments.php:1194
+msgid "All spam comments have been deleted."
+msgstr "Все спам-комментарии удалены."
+
+#: views/partials/_sites.php:12
+msgid "Select All"
+msgstr "Выбрать все"
+
+#: views/partials/_delete.php:15
+msgid "Select your sub-sites where you want to delete comments."
+msgstr "Выберите свои дочерние сайты, на которых вы хотите удалить комментарии."
+
+#: views/settings.php:12
+msgctxt "Tab Name"
+msgid "Delete Comments"
+msgstr "Удаление комментариев"
+
+#: views/settings.php:9
+msgctxt "Tab Name"
+msgid "Disable Comments"
+msgstr "Отключение комментариев"
+
+#: views/partials/_disable.php:33
+msgid "This site will be controlled by the network admin until you click the \"Save Changes\" button."
+msgstr "Этот сайт будет контролироваться сетевым администратором, пока вы не нажмете кнопку «Сохранить изменения»."
+
+#: views/partials/_disable.php:19
+msgid "If you enable Site Wise settings, you need to configure your “Disable Comments” settings individually on every website in the network."
+msgstr "Если вы включите настройки Site Wise, вам необходимо настроить параметры «Отключить комментарии» индивидуально на каждом веб-сайте в сети."
+
+#: views/settings.php:6
+msgid "Version"
+msgstr "Версия"
+
+#: views/partials/_disable.php:162
+msgid "Turning on these settings will disable any comments made on your website via XML-RPC or REST API specifications."
+msgstr "Включение этих настроек отключит любые комментарии, оставленные на вашем веб-сайте с помощью спецификаций XML-RPC или REST API."
+
+#: views/partials/_disable.php:158
+msgid "Disable Comments via REST API"
+msgstr "Отключить комментарии через REST API"
+
+#: views/partials/_disable.php:149
+msgid "Disable Comments via XML-RPC"
+msgstr "Отключить комментарии через XML-RPC"
+
+#: views/partials/_disable.php:15 views/partials/_disable.php:74
+#: views/partials/_disable.php:102 views/partials/_disable.php:147
+#: views/partials/_disable.php:157
+msgid "Off"
+msgstr "Откл"
+
+#: views/partials/_disable.php:14 views/partials/_disable.php:73
+#: views/partials/_disable.php:101 views/partials/_disable.php:146
+#: views/partials/_disable.php:156
+msgid "On"
+msgstr "Вкл"
+
+#: views/partials/_disable.php:139
+msgid "You can disable comments made on your website using WordPress specifications."
+msgstr "Вы можете отключить комментарии, оставленные на вашем сайте, используя спецификации WordPress."
+
+#: views/partials/_disable.php:138
+msgid "Disable Comments With API"
+msgstr "Отключить комментарии с помощью API"
+
+#: views/partials/_disable.php:64
+msgid "Disabling comments will also disable trackbacks and pingbacks. All comment-related fields will also be hidden from the edit/quick-edit screens of the affected posts. These settings cannot be overridden for individual posts. Comments will be visible on all other post types."
+msgstr "Отключение комментариев также отключит обратные ссылки и уведомления. Все поля, связанные с комментариями, также будут скрыты на экранах редактирования/быстрого редактирования затронутых записей. Эти настройки нельзя переопределить для отдельных записей. Комментарии будут видны во всех других типах записи."
+
+#: views/partials/_disable.php:45
+msgid "On Specific Post Types:"
+msgstr "О конкретных типах записи:"
+
+#: views/partials/_disable.php:41
+msgid "This will disable comments from every page and post on your website. Use this setting if you do not want to show comments anywhere."
+msgstr "Это отключит комментарии с каждой страницы и записи на вашем сайте. Используйте этот параметр, если вы не хотите, чтобы где-либо отображались комментарии."
+
+#: views/partials/_disable.php:40
+msgid "Disable comments globally on your entire website"
+msgstr "Отключить комментарии глобально на всем сайте"
+
+#: views/partials/_disable.php:4
+msgid "Configure the settings below to disable comments globally or on specific types of posts."
+msgstr "Настройте параметры ниже, чтобы отключить комментарии глобально или для определенных типов записей."
+
+#: views/partials/_sidebar.php:128
+msgid "Disable Comments For WordPress Pages"
+msgstr "Отключить комментарии для страниц WordPress"
+
+#: views/partials/_sidebar.php:118
+msgid "Disable Comment For WordPress Media Files"
+msgstr "Отключить комментарии для медиафайлов WordPress"
+
+#: views/partials/_sidebar.php:95
+msgid "Disable Comments For Some Particular Post"
+msgstr "Отключить комментарии для определенной записи"
+
+#: views/partials/_sidebar.php:72
+msgid "How to Disable Comments on Specific Types Of Posts"
+msgstr "Как отключить комментарии к определенным типам записей"
+
+#: views/partials/_sidebar.php:49
+msgid "How To Use Disable Comments Plugin With WP-CLI"
+msgstr "Как использовать плагин отключения комментариев с WP-CLI"
+
+#: views/partials/_sidebar.php:26
+msgid "What Does This Disable Comments Plugin Do"
+msgstr "Что делает этот плагин для отключения комментариев"
+
+#: views/partials/_sidebar.php:3
+msgid "Read Our Tutorials"
+msgstr "Прочтите наши руководства"
+
+#: views/partials/_delete.php:50
+msgid "Delete Certain Comment Types:"
+msgstr "Удалить определенные типы комментариев:"
+
+#: views/partials/_delete.php:46
+msgid "This will remove existing comment entries for the selected post type(s) in the database and cannot be reverted without a database backups."
+msgstr "Это приведет к удалению существующих записей комментариев для выбранных типов записи в базе данных и не может быть отменено без резервного копирования базы данных."
+
+#: views/partials/_delete.php:23
+msgid "This will permanently delete comments everywhere on your website."
+msgstr "Это навсегда удалит комментарии на вашем сайте."
+
+#: views/partials/_delete.php:23 views/partials/_delete.php:46
+#: views/partials/_delete.php:59 views/partials/_delete.php:64
+#: views/partials/_disable.php:41
+msgid "Warnings:"
+msgstr "Предупреждения:"
+
+#: views/partials/_delete.php:22
+msgid "Permanently delete all comments on your WordPress website"
+msgstr "Навсегда удалить все комментарии на вашем сайте WordPress"
+
+#: views/partials/_delete.php:19
+msgid "These settings will permanently delete comments for your entire website, or for specific posts and comment types."
+msgstr "Эти настройки навсегда удалят комментарии для всего вашего веб-сайта или для определенных записей и типов комментариев."
+
+#: views/partials/_delete.php:15 views/partials/_delete.php:19
+#: views/partials/_disable.php:19 views/partials/_disable.php:28
+#: views/partials/_disable.php:33 views/partials/_disable.php:64
+#: views/partials/_disable.php:91 views/partials/_disable.php:107
+#: views/partials/_disable.php:132
+msgid "Note:"
+msgstr "Заметка:"
+
+#: views/partials/_menu.php:8
+msgid "Privacy"
+msgstr "Конфиденциальность"
+
+#: views/partials/_menu.php:7
+msgid "Terms Of Service"
+msgstr "Условия использования"
+
+#: views/partials/_menu.php:6
+msgid "Docs"
+msgstr "Документация"
+
+#: views/partials/_menu.php:5
+msgid "Support Forum"
+msgstr "Форум поддержки"
+
+#: views/partials/_menu.php:4
+msgid "All Plugins"
+msgstr "Все плагины"
+
+#: views/partials/_menu.php:3
+msgid "About Us"
+msgstr "О нас"
+
+#: includes/class-plugin-usage-tracker.php:868
+msgid "Just Deactivate"
+msgstr "Просто деактивировать"
+
+#: includes/class-plugin-usage-tracker.php:868
+msgid "Submit and Deactivate"
+msgstr "Отправить и Деактивировать"
+
+#: includes/class-plugin-usage-tracker.php:810
+msgid "Submitting form"
+msgstr "Форма отправки"
+
+#: includes/class-plugin-usage-tracker.php:768
+msgid "Please share the reason"
+msgstr "Пожалуйста, поделитесь причиной"
+
+#: includes/class-plugin-usage-tracker.php:767
+msgid "Other"
+msgstr "Другое"
+
+#: includes/class-plugin-usage-tracker.php:765
+msgid "It's a temporary deactivation"
+msgstr "Это временная деактивация"
+
+#: includes/class-plugin-usage-tracker.php:764
+msgid "I couldn't get the plugin to work"
+msgstr "Я не смог работать с плагином"
+
+#: includes/class-plugin-usage-tracker.php:762
+msgid "Please share which plugin"
+msgstr "Пожалуйста, поделитесь какой плагин"
+
+#: includes/class-plugin-usage-tracker.php:761
+msgid "I found a better plugin"
+msgstr "Я нашёл(а) плагин лучше"
+
+#: includes/class-plugin-usage-tracker.php:759
+msgid "I no longer need the plugin"
+msgstr "Плагин мне больше не нужен"
+
+#: includes/class-plugin-usage-tracker.php:756
+msgid "Before you deactivate the plugin, would you quickly give us your reason for doing so?"
+msgstr "Перед тем, как отключить плагин, не могли бы вы коротко указать причину?"
+
+#: includes/class-plugin-usage-tracker.php:755
+msgid "Sorry to see you go"
+msgstr "Жаль, что Вы уходите"
+
+#: includes/class-plugin-usage-tracker.php:662
+msgid "No Thanks."
+msgstr "Нет, спасибо."
+
+#: includes/class-plugin-usage-tracker.php:661
+msgid "Sure, I'd like to help"
+msgstr "Конечно, я хочу помочь"
+
+#: includes/class-plugin-usage-tracker.php:660
+msgid "What we collect."
+msgstr "Что собираем."
+
+#: includes/class-plugin-usage-tracker.php:386
+msgid "We can't detect any plugin information. This is most probably because you have not included the code in the plugin main file."
+msgstr "Мы не можем обнаружить информацию о плагине. Скорее всего, это потому, что вы не включили код в основной файл плагина."
+
+#: includes/cli.php:177
+msgid "Disable Comments via REST API. "
+msgstr "Отключить комментарии через REST API. "
+
+#: includes/cli.php:168
+msgid "Disable Comments via XML-RPC. "
+msgstr "Отключить комментарии через XML-RPC. "
+
+#. translators: %s: post types to be disabled in network
+#: includes/cli.php:162
+msgid "Custom post types: %s. "
+msgstr "Пользовательские типы записей: %s. "
+
+#. translators: %s: post types to be enabled
+#: includes/cli.php:151
+msgid "Comments enabled for %s. "
+msgstr "Комментарии включены для %s. "
+
+#. translators: %s: post types to be disabled
+#: includes/cli.php:142 includes/cli.php:146
+msgid "Comments disabled for %s. "
+msgstr "Комментарии отключены для %s. "
+
+#: includes/cli.php:136
+msgid "Comments is disabled everywhere. "
+msgstr "Комментарии отключены везде. "
+
+#: disable-comments.php:1051
+msgid "Saved"
+msgstr "Сохранено"
+
+#: disable-comments.php:161
+msgid "We collect non-sensitive diagnostic data and plugin usage information. Your site URL, WordPress & PHP version, plugins & themes and email address to send you the discount coupon. This data lets us make sure this plugin always stays compatible with the most popular plugins and themes. No spam, I promise."
+msgstr "Мы собираем неконфиденциальные диагностические данные и информацию об использовании плагина. URL вашего сайта, версия WordPress и PHP, плагины и темы, а также адрес электронной почты для отправки вам купона на скидку. Эти данные позволяют нам убедиться, что этот плагин всегда остается совместимым с наиболее популярными плагинами и темами. Обещаем, спама не будет."
+
+#: disable-comments.php:160
+msgid "Want to help make Disable Comments even better?"
+msgstr "Хотите помочь сделать Disable Comments еще лучше?"
+
+#: views/partials/_delete.php:59
+msgid "Deleting comments by comment type will remove existing comment entries of the selected comment type(s) in the database and cannot be reverted without a database backup."
+msgstr "Удаление комментариев по типу комментария приведет к удалению существующих записей комментариев выбранного типа комментариев в базе данных и не может быть восстановлено без резервного копирования базы данных."
+
+#: disable-comments.php:842
+msgid "Default (no type)"
+msgstr "По умолчанию (без типа)"
+
+#. Description of the plugin
+msgid "Allows administrators to globally disable comments on their site. Comments can be disabled according to post type. You could bulk delete comments using Tools."
+msgstr "Позволяет администраторам глобально отключать комментарии на своем сайте. Комментарии могут быть отключены в зависимости от типа записи. Вы можете массово удалять комментарии с помощью инструментов."
+
+#: disable-comments.php:767
+msgctxt "settings menu title"
+msgid "Disable Comments"
+msgstr "Отключение комментариев"
+
+#: disable-comments.php:758
+msgid "Tools"
+msgstr "Инструменты"
+
+#: disable-comments.php:757 views/partials/_disable.php:3
+msgid "Settings"
+msgstr "Настройки"
+
+#. translators: %s: URL to Disabled Comment settings page.
+#: disable-comments.php:668
+msgid "The <strong>Disable Comments</strong> plugin is active, but isn't configured to do anything yet. Visit the <a href=\"%s\">configuration page</a> to choose which post types to disable comments on."
+msgstr "Подключаемый плагин <strong>Disable Comments</strong> активен, но еще не настроен. Посетите <a href=\"%s\">страницу конфигурации</a>, чтобы выбрать, для каких типов записи следует отключить комментарии."
+
+#. translators: %s: disabled post types.
+#: disable-comments.php:632
+msgid ", "
+msgstr ", "
+
+#. translators: %s: disabled post types.
+#: disable-comments.php:632
+msgid "Note: The <em>Disable Comments</em> plugin is currently active, and comments are completely disabled on: %s. Many of the settings below will not be applicable for those post types."
+msgstr "Заметка: Плагин <em>Отключение комментариев</em> активирован и комментарии полностью отключены: %s. Настройки ниже неприменимы к этим типам записей."
+
+#: disable-comments.php:517 disable-comments.php:677 disable-comments.php:684
+msgid "Comments are closed."
+msgstr "Обсуждение закрыто."
+
+#. translators: %s: WordPress version no.
+#: disable-comments.php:173
+msgid "Disable Comments requires WordPress version %s or greater."
+msgstr "Для работы плагина требуется WordPress версии %s или выше."
+
+#: views/partials/_disable.php:167
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: views/partials/_delete.php:27
+msgid "On Certain Post Types:"
+msgstr "Для отдельных типов записей:"
+
+#: views/partials/_delete.php:66
+msgid "Total Comments:"
+msgstr "Всего комментариев:"
+
+#: views/partials/_delete.php:43 views/partials/_disable.php:61
+msgid "Custom post types:"
+msgstr "Произвольные типы записей:"
+
+#: views/partials/_delete.php:42 views/partials/_disable.php:60
+msgid "Only the built-in post types appear above. If you want to disable comments on other custom post types on the entire network, you can supply a comma-separated list of post types below (use the slug that identifies the post type)."
+msgstr "Только встроенные типы записей отображаются выше. Если вы хотите отключить комментарии для других типов записей во всей сети, укажите список пользовательских типов записей, разделяя их запятыми (используйте ярлык, который идентифицирует пользовательский тип записи)."
+
+#: views/partials/_delete.php:22 views/partials/_disable.php:40
+msgid "Everywhere:"
+msgstr "Везде:"
+
+#: disable-comments.php:1128 disable-comments.php:1132
+msgid "Internal error occured. Please try again later."
+msgstr "Произошла внутренняя ошибка. Пожалуйста, повторите попытку позже."
+
+#: disable-comments.php:1126 disable-comments.php:1160
+#: disable-comments.php:1183
+msgid "All comments have been deleted"
+msgstr "Все комментарии удалены"
+
+#: views/partials/_delete.php:210
+msgid "No comments are available for deletion."
+msgstr "Нет доступных для удаления комментариев."
+
+#: disable-comments.php:777 views/partials/_delete.php:72
+#: assets/js/disable-comments-settings-scripts.js:339
+msgid "Delete Comments"
+msgstr "Удалить комментарии"
+
+#. Author URI of the plugin
+msgid "https://wpdeveloper.com"
+msgstr "https://wpdeveloper.com"
+
+#. Author of the plugin
+msgid "WPDeveloper"
+msgstr "WPDeveloper"
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/disable-comments/"
+msgstr "https://wordpress.org/plugins/disable-comments/"
+
+#. Plugin Name of the plugin
+#: disable-comments.php:369
+msgid "Disable Comments"
+msgstr "Disable Comments"

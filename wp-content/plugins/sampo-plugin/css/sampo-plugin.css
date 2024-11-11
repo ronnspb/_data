@@ -1,0 +1,46 @@
+.sampo-passport {
+  display: flex;
+}
+
+.dspflex {
+  display: flex;
+  align-items: center;
+}
+
+.date-input {
+  width: 30% !important;
+}
+
+tr:nth-child(odd) {
+  background: #fff;
+}
+
+.order-list tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+input[type="file"] {
+  width: 90%;
+  max-width: 100%;
+  color: #444;
+  padding: 5px;
+  background: #fff;
+  margin-bottom: 5px;
+  border: 1px solid #555;
+  font-weight: 700;
+}
+
+input[type="file"]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #0693e3;
+  padding: 10px 20px;
+
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: #0d45a5;
+}
