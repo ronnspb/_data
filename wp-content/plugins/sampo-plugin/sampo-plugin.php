@@ -12,13 +12,7 @@
 
 
 
- $type_of_files =[
-  "sampo_file_upload_passport" => 1020,
-  "sampo_file_upload_photo" => 1010,
-  "sampo_file_upload_ustav" => 2000,
-  "sampo_file_upload_vipiska" => 2010,
 
-];
 
 function sampo_plugin_activate()
 {
@@ -722,7 +716,7 @@ function user_has_accses_to_order($order_id){
  
   $results = $GLOBALS['wpdb']->get_results(
     $GLOBALS['wpdb']->prepare("
-    SELECT id FROM orders_registration WHERE id=%d AND user_id=%d",$order_id,get_current_user_id()));
+    SELECT id FROM orders_registration WHERE id=%d AND user_id=%d",$order_id, get_current_user_id()));
     if (!empty($results)){
       return true;
     }
@@ -783,7 +777,22 @@ function sampo_upload_register($atts){
 // ЗАгрузка Файлов Server
 
 function sampo_add_files_to_db($file_name,$file_url,$order_id,$type){
-
+  $type_of_files = [
+    "sampo_file_upload_passport" => 1020,
+    "sampo_file_upload_photo" => 1010,
+    "sampo_file_upload_ustav" => 2000,
+    "sampo_file_upload_vipiska" => 2010,
+    "sampo_file_upload_passport_sig" =>991020,         
+    "sampo_file_upload_uch_sig" =>    994000,
+    "sampo_file_upload_ustav_sig"    =>  992000,  
+    "sampo_file_upload_zayv_fns_ul_sig"   =>      9911001,  
+    "sampo_file_upload_zayv_fns_ip_sig"      =>    9921001,  
+    "sampo_file_upload_usn_sig"   =>    991150001,  
+    "sampo_file_upload_xml_ip_sig" =>     998821,  
+    "sampo_file_upload_xml_ul_sig"     =>    998811  
+       
+  
+  ];
   
   $file_type = $type_of_files[$type];
   error_log($file_name."\n".$file_url."\n".$order_id."\n");
@@ -796,27 +805,39 @@ function sampo_add_files_to_db($file_name,$file_url,$order_id,$type){
 add_action('admin_post_sampo_upload_file', function () {
  
   require_once ABSPATH . 'wp-admin/includes/file.php';
-  
+  error_log(print_r($_POST,true));
   $check1 = wp_verify_nonce(
       $_POST['fileup_nonce'],
       'sampo_file_upload'
   );
   $check2 = current_user_can('upload_files');
   ob_start();
-  $file_keys = array("sampo_file_upload_photo","sampo_file_upload_passport","sampo_file_upload_ustav");
+  $file_keys = array("sampo_file_upload_photo",
+                      "sampo_file_upload_passport",
+                      "sampo_file_upload_ustav",
+                      "sampo_file_upload_passport_sig",         
+                      "sampo_file_upload_uch_sig",
+                      "sampo_file_upload_ustav_sig",  
+                      "sampo_file_upload_zayv_fns_ul_sig",  
+                      "sampo_file_upload_zayv_fns_ip_sig",  
+                      "sampo_file_upload_usn_sig",  
+                      "sampo_file_upload_xml_ip_sig",  
+                      "sampo_file_upload_xml_ul_sig"  
+                    );
   $has_error = false; 
   if ($check1 && $check2) {
-     
+    error_log("Check OK upload files\n");
       $dest_path =  getcwd()."/attachmens/";
       if (!file_exists($dest_path)) {
         mkdir($dest_path, 0666, true);
-    }
+     }
       
       
-      $overrides = ['test_form' => false];
+      $overrides = ['test_form' => false,
+      "test_type"=> false];
      
       //  error_log(print_r($files,true));
-      
+     
       foreach ( $file_keys as $value ) {
         // if( empty( $files['name'][ $key ] ) ){
         //   continue;
@@ -824,13 +845,16 @@ add_action('admin_post_sampo_upload_file', function () {
         if (!isset($_FILES[$value])){
           continue;
         }
+        
        
         $result = wp_handle_upload(
         $_FILES[$value],
         $overrides
       );
+      error_log(print_r($result ,true));
       if (isset($result['error'])) {
         $has_error = true;
+        error_log("upload error files\n");
         continue;}
        
      
@@ -1130,10 +1154,23 @@ add_shortcode('sampo_sig_files', 'sampo_sig_files');
 
 function sampo_get_files_to_sig($order_id){
   $results = $GLOBALS['wpdb']->get_results(
-  $GLOBALS['wpdb']->prepare(" SELECT FileTypeCodes.type_name, orders_files.url, orders_files.file_name, orders_files.file_type, FileTypeCodes.signature_code FROM orders_files 
+  $GLOBALS['wpdb']->prepare("SELECT FileTypeCodes.type_name, orders_files.url, orders_files.file_name, orders_files.file_type, FileTypeCodes.signature_code,
+       (CASE 
+           
+            WHEN FileTypeCodes.signature_code = 991020 THEN \"sampo_file_upload_passport_sig\"
+            WHEN FileTypeCodes.signature_code = 994000 THEN \"sampo_file_upload_uch_sig\"
+            WHEN FileTypeCodes.signature_code = 992000 THEN \"sampo_file_upload_ustav_sig\"
+            WHEN FileTypeCodes.signature_code = 9911001 THEN \"sampo_file_upload_zayv_fns_ul_sig\"
+            WHEN FileTypeCodes.signature_code = 9921001 THEN \"sampo_file_upload_zayv_fns_ip_sig\"
+            WHEN FileTypeCodes.signature_code = 991150001 THEN \"sampo_file_upload_usn_sig\"
+            WHEN FileTypeCodes.signature_code = 998821 THEN \"sampo_file_upload_xml_ip_sig\"
+            WHEN FileTypeCodes.signature_code = 998811 THEN \"sampo_file_upload_xml_ul_sig\"
+        END
+        ) as file_elem
+       FROM orders_files 
        LEFT JOIN FileTypeCodes 
        ON orders_files.file_type = FileTypeCodes.file_code
-       WHERE orders_files.order_id = %d AND FileTypeCodes.is_signature = 0",$order_id));
+       WHERE orders_files.order_id = %d AND FileTypeCodes.is_signature = 0 AND FileTypeCodes.signature_code <> 0",$order_id));
   error_log(print_r($results,true));
 
   return $results;
@@ -1155,6 +1192,8 @@ function sampo_sig_files($atts){
   
 
   ?>
+  <?php wp_nonce_field( 'sampo_file_upload', 'fileup_nonce' ); ?>
+  <input type="hidden" id="order_id" name="order_id" value="<?php echo $order_id; ?>">
   <h3>Подписать файлы</h3>
   <?php 
   $str = "<div>";
@@ -1203,22 +1242,37 @@ function sampo_rest_api_init()
 }
 
 function sampo_rest_get_files_to_sig($data){
+  // $headers = $data->get_headers();
+
+  // $nonce =  $headers["x_wp_nonce"][0];
+  // error_log(print_r($nonce, true));
   
-  
-  $files_to_sig = sampo_get_files_to_sign();
+  // if (!wp_verify_nonce($nonce, "sampo_reg_bis_nonce")) {
+  //   return new WP_REST_Response("Data not save", 422);
+  // }
+  $params = $data->get_params();
+
+  $order_id = $params["order_id"];
+  if (!user_has_accses_to_order($order_id)){
+    error_log(print_r($data,true));
+    return new WP_REST_Response("Access denied", 403);
+  }
+  $params = $data->get_params();
+  $files_to_sig = sampo_get_files_to_sig($order_id);
+  return new WP_REST_Response($files_to_sig);
 }
 
 
 function filter_evil_char($srting) {}
 function sampo_handle_upd_rgister($data)
 {
-  $headers = $data->get_headers();
+  // $headers = $data->get_headers();
 
-  $nonce =  $headers["x_wp_nonce"][0];
-  error_log(print_r($nonce, true));
-  // // if (!wp_verify_nonce($nonce, "sampo_reg_bis_nonce")) {
-  // //   return new WP_REST_Response("Data not save", 422);
-  // // }
+  // $nonce =  $headers["x_wp_nonce"][0];
+  // error_log(print_r($nonce, true));
+  // if (!wp_verify_nonce($nonce, "sampo_reg_bis_nonce")) {
+  //   return new WP_REST_Response("Data not save", 422);
+  // }
   $params = $data->get_params();
   //error_log(print_r($params, true));
   $results = $GLOBALS['wpdb']->query(
@@ -1320,13 +1374,13 @@ function sampo_handle_upd_rgister($data)
 
 function sampo_handle_rgister($data)
 {
-  $headers = $data->get_headers();
+  // $headers = $data->get_headers();
 
-  $nonce =  $headers["x_wp_nonce"][0];
-  error_log(print_r($nonce, true));
-  // // if (!wp_verify_nonce($nonce, "sampo_reg_bis_nonce")) {
-  // //   return new WP_REST_Response("Data not save", 422);
-  // // }
+  // $nonce =  $headers["x_wp_nonce"][0];
+  // error_log(print_r($nonce, true));
+  // if (!wp_verify_nonce($nonce, "sampo_reg_bis_nonce")) {
+  //   return new WP_REST_Response("Data not save", 422);
+  // }
   $params = $data->get_params();
   //error_log(print_r($params, true));
   $results = $GLOBALS['wpdb']->query(
